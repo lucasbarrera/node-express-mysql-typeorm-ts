@@ -14,29 +14,29 @@ export class Profesor {
   id: number;
 
   @Column()
-  dni: String;
+  dni: string;
 
   @Column()
-  nombre: String;
+  nombre: string;
 
   @Column()
-  apellido: String;
+  apellido: string;
 
   @Column()
-  email: String;
+  email: string;
 
   @Column()
-  profesion: String;
+  profesion: string;
 
   @Column()
-  telefono: String;
+  telefono: string;
+
+  @OneToMany(() => Curso, (curso) => curso.profesor)
+  cursos: Curso[];
 
   @CreateDateColumn()
   createdAt: Date;
 
   @UpdateDateColumn()
   updatedAt: Date;
-
-  @OneToMany(() => Curso, (curso) => curso.profesor)
-  cursos: Curso[];
 }

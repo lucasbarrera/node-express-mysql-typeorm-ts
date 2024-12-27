@@ -23,21 +23,21 @@ export class Curso {
   @Column("text")
   descripcion: string;
 
-  @CreateDateColumn()
-  createdAt: Date;
-
-  @UpdateDateColumn()
-  updatedAt: Date;
-
   @ManyToOne(() => Profesor, (profesor) => profesor.cursos)
   @JoinColumn({ name: "profesor_id" })
   profesor: Profesor;
 
   @ManyToMany(() => Estudiante)
   @JoinTable({
-    name: "estudiante_cursos",
+    name: "estudiantes_cursos",
     joinColumn: { name: "curso_id" },
     inverseJoinColumn: { name: "estudiante_id" },
   })
   estudiantes: Estudiante[];
+
+  @CreateDateColumn()
+  createdAt: Date;
+
+  @UpdateDateColumn()
+  updatedAt: Date;
 }

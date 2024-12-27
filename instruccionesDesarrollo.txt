@@ -1,0 +1,27 @@
+Api con ExpressJS NodeJS TS typeORM Mysql
+
+* Iniciar proyecto => npm init
+* Instalar typescript => npm i typescript -D
+* Instalar dependencias dependencias del proyecto 
+     "cors"
+    "express"
+    "morgan"
+    "mysql2"
+    "reflect-metadata"
+    "typeorm"
+* Agregar script tsc al archivo package.json => "tsc":"tsc"
+* Correr script tsc para crear tsconfig => npm run tsc -- --init
+* Crear carpeta src
+* Crear archivo index.ts
+* Instalar tipos para typescript (dependencias de desarrollo)
+    @types/cors
+    @types/express
+    @types/morgan
+    @types/node
+
+* Instalar ts-node-dev para convertir ts a js => npm i ts-node-dev 
+* crear y ejecutar script dev => "dev":"ts-node-dev src/index.ts"
+* Incorporar typeORM 
+    - npm i typeORM --save
+    - crear conexion con base de datos
+    - exportar e importar AppDataSource para usar los metodos de typeORM 
